@@ -1,0 +1,50 @@
+[
+  {
+    "date": "2026-03-20",
+    "title": "PRL paper selected as Editor's Suggestion and Featured in Physics",
+    "category": "publication",
+    "content": "Our paper *Stratification-Dependent Enstrophy-Controlled Regime in Geostrophic Turbulence* published in Physical Review Letters (136, 114101, 2026) has been selected as an **Editor's Suggestion** and **Featured in Physics**. The work experimentally reveals how baroclinic instability shapes the k⁻³ energy spectrum in geostrophic turbulence.",
+    "link_url": "https://doi.org/10.1103/n2nj-dg5r",
+    "pinned": true
+  },
+  {
+    "date": "2025-06-01",
+    "title": "Oral presentation at the Geophysical and Astrophysical Fluid Dynamics Conference",
+    "category": "talk",
+    "content": "Presented our latest results on zonal jet flows and geostrophic turbulence in the rotating annulus experiment at the Geophysical and Astrophysical Fluid Dynamics Conference.",
+    "link_url": null,
+    "pinned": false
+  },
+  {
+    "date": "2025-05-01",
+    "title": "New paper published: Predicting IBL growth in stratified boundary layers",
+    "category": "publication",
+    "content": "Our paper *Predicting full growth of internal boundary layers induced by a roughness change in neutrally and stably stratified circumstances* is published in Journal of Fluid Mechanics (1016: R4, 2025).",
+    "link_url": "https://doi.org/10.1017/jfm.2025.10293",
+    "pinned": false
+  },
+  {
+    "date": "2024-11-20",
+    "title": "Paper published in Measurement Science and Technology",
+    "category": "publication",
+    "content": "*Turbulence statistics estimation across a step change in roughness via interpretable network-based modelling* published in Meas. Sci. Technol. 36(1): 016026 (2025), with collaborators at University of Surrey.",
+    "link_url": "https://doi.org/10.1088/1361-6501/ad9046",
+    "pinned": false
+  },
+  {
+    "date": "2024-05-01",
+    "title": "New JFM paper on stratified boundary layer statistics",
+    "category": "publication",
+    "content": "*Statistical properties of neutrally and stably stratified boundary layers in response to an abrupt change in surface roughness* published in Journal of Fluid Mechanics 986, A4 (2024).",
+    "link_url": "https://doi.org/10.1017/jfm.2024.329",
+    "pinned": false
+  },
+  {
+    "date": "2024-01-01",
+    "title": "Oral presentation at the Dynamics of Rotating Fluids Conference",
+    "category": "talk",
+    "content": "Presented our work on rotating turbulence and zonal jet flows at the Dynamics of Rotating Fluids Conference.",
+    "link_url": null,
+    "pinned": false
+  }
+]

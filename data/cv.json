@@ -1,0 +1,106 @@
+[
+  {
+    "title": "Oral Presentation – Geophysical and Astrophysical Fluid Dynamics Conference",
+    "institution": "International",
+    "start_year": 2025,
+    "end_year": null,
+    "category": "service",
+    "description": "Oral report at the Geophysical and Astrophysical Fluid Dynamics Conference."
+  },
+  {
+    "title": "Oral Presentation – Dynamics of Rotating Fluids Conference",
+    "institution": "International",
+    "start_year": 2024,
+    "end_year": null,
+    "category": "service",
+    "description": "Oral report at the Dynamics of Rotating Fluids Conference."
+  },
+  {
+    "title": "Postdoctoral Research Associate",
+    "institution": "University of Oxford",
+    "start_year": 2023,
+    "end_year": null,
+    "category": "position",
+    "description": "Designed and constructed a 600 rpm rotating platform to study the baroclinically driven zonal jet flows under the EPSRC grant 'Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection'."
+  },
+  {
+    "title": "Poster – 11th International Conference on Urban Climate",
+    "institution": "International",
+    "start_year": 2023,
+    "end_year": null,
+    "category": "service",
+    "description": "Poster presentation at the 11th International Conference on Urban Climate."
+  },
+  {
+    "title": "EPSRC Grant: Rapidly Rotating Thermal Convection",
+    "institution": "University of Oxford",
+    "start_year": 2023,
+    "end_year": null,
+    "category": "grant",
+    "description": "Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection."
+  },
+  {
+    "title": "Oral Presentation – 14th European Fluid Mechanics Conference",
+    "institution": "International",
+    "start_year": 2022,
+    "end_year": null,
+    "category": "service",
+    "description": "Oral report at the 14th European Fluid Mechanics Conference."
+  },
+  {
+    "title": "NERC Grant: ASSURE",
+    "institution": "University of Surrey",
+    "start_year": 2022,
+    "end_year": 2023,
+    "category": "grant",
+    "description": "Across-Scale processeS in URban Environments (NE/W002825/1) – studying the development of internal boundary layers in urban environments."
+  },
+  {
+    "title": "Postdoctoral Research Fellow",
+    "institution": "University of Surrey",
+    "start_year": 2022,
+    "end_year": 2023,
+    "category": "position",
+    "description": "Conducted wind-tunnel experiments to study the development of internal boundary layers under the NERC grant 'Across-scale processes in urban environments'."
+  },
+  {
+    "title": "Teaching: Aerodynamic Instability Demonstration",
+    "institution": "University",
+    "start_year": 2021,
+    "end_year": null,
+    "category": "service",
+    "description": "Aerodynamic instability demonstration and wave tank demonstration."
+  },
+  {
+    "title": "Visiting Researcher",
+    "institution": "Imperial College London",
+    "start_year": 2021,
+    "end_year": 2022,
+    "category": "position",
+    "description": "Applied planar PIV and stereo PIV techniques in a wind tunnel to study the wake dynamics of porous disks and to model the wake meandering."
+  },
+  {
+    "title": "Oral Presentation – 71st APS Division of Fluid Dynamics",
+    "institution": "American Physical Society",
+    "start_year": 2018,
+    "end_year": null,
+    "category": "service",
+    "description": "Oral report at the 71st Annual APS Meeting, Division of Fluid Dynamics."
+  },
+  {
+    "title": "Ph.D. in Physics",
+    "institution": "Tongji University, China",
+    "start_year": 2016,
+    "end_year": 2021,
+    "category": "education",
+    "description": "Designed and conducted PIV and numerical experiments under multiple NSFC grants, studying large-scale vortex structures, vortex dynamics, and thermal boundary layers in rotating Rayleigh-Bénard convection."
+  },
+  {
+    "title": "B.Sc. in Applied Physics",
+    "institution": "Tongji University, China",
+    "start_year": 2012,
+    "end_year": 2016,
+    "category": "education",
+    "description": "Excellent Graduate of Shanghai."
+  }
+]
