@@ -161,14 +161,14 @@ function pubCard(p, { abstract = false, doi = false } = {}) {
     <article class="pub-card">
       <div class="pub-row">
         <span class="pub-year">${p.year}</span>
-        <div class="pub-main">
-          <div>
+        <div>
+          <div class="pub-head">
             <h3>${p.title}</h3>
-            <p class="pub-authors">${p.authors}</p>
-            <p class="pub-journal">${p.journal}</p>
-            ${abstract && p.abstract ? `<p class="pub-abstract">${p.abstract}</p>` : ""}
+            ${doi && doiHref ? `<div class="pub-links"><a href="${doiHref}" target="_blank" rel="noopener noreferrer">${ICONS.external} DOI</a></div>` : ""}
           </div>
-          ${doi && doiHref ? `<div class="pub-links"><a href="${doiHref}" target="_blank" rel="noopener noreferrer">${ICONS.external} DOI</a></div>` : ""}
+          <p class="pub-authors">${p.authors}</p>
+          <p class="pub-journal">${p.journal}</p>
+          ${abstract && p.abstract ? `<p class="pub-abstract">${p.abstract}</p>` : ""}
         </div>
       </div>
     </article>`;
@@ -186,11 +186,11 @@ async function renderHome() {
   document.getElementById("latest-news").innerHTML = latest.map((n) => `
     <article class="news-card">
       <div class="news-meta">
-        <span class="news-date">${formatDate(n.date)}</span>
-        ${n.category ? `<span class="news-cat">${n.category}</span>` : ""}
+        <span class="date">${formatDate(n.date)}</span>
+        ${n.category ? `<span class="cat">${n.category}</span>` : ""}
       </div>
       <h3>${n.title}</h3>
-      <p>${md(n.content)}</p>
+      <p class="line-clamp-3">${md(n.content)}</p>
     </article>`).join("");
 }
 
@@ -205,10 +205,10 @@ async function renderPublications() {
 
   const draw = () => {
     topicEl.innerHTML = TOPICS.map((t) =>
-      `<button type="button" class="filter-btn${topic === t.value ? " active" : ""}" data-v="${t.value}">${t.label}</button>`
+      `<button type="button" class="chip${topic === t.value ? " is-active" : ""}" data-v="${t.value}">${t.label}</button>`
     ).join("");
     sortEl.innerHTML = SORTS.map((s) =>
-      `<button type="button" class="filter-btn${sort === s.value ? " accent" : ""}" data-v="${s.value}">${s.label}</button>`
+      `<button type="button" class="chip is-sort${sort === s.value ? " is-active" : ""}" data-v="${s.value}">${s.label}</button>`
     ).join("");
 
     let items = pubs.filter((p) => topic === "all" || p.topic === topic);
@@ -246,7 +246,7 @@ async function renderCV() {
 
   const draw = () => {
     filters.innerHTML = CV_CATS.map((c) =>
-      `<button type="button" class="filter-btn${cat === c.value ? " active" : ""}" data-v="${c.value}">${c.label}</button>`
+      `<button type="button" class="chip${cat === c.value ? " is-active" : ""}" data-v="${c.value}">${c.label}</button>`
     ).join("");
     const items = entries.filter((e) => cat === "all" || e.category === cat);
     countEl.textContent = `${items.length} milestones`;
@@ -260,8 +260,8 @@ async function renderCV() {
           <div class="cv-rail"><div class="cv-dot"></div><div class="cv-line"></div></div>
           <div class="cv-body">
             <div class="cv-meta">
-              <span class="cv-range">${range}</span>
-              <span class="cv-cat">${CV_LABELS[e.category] || e.category}</span>
+              <span class="years">${range}</span>
+              <span class="cat">${CV_LABELS[e.category] || e.category}</span>
             </div>
             <h3>${e.title}</h3>
             ${e.institution ? `<p class="cv-inst">${e.institution}</p>` : ""}
@@ -287,12 +287,12 @@ async function renderNews() {
     <article class="news-item">
       <div class="news-meta">
         ${n.pinned ? `<span class="pin">Pinned</span>` : ""}
-        <span class="news-date">${formatDateLong(n.date)}</span>
-        ${n.category ? `<span class="news-cat">${n.category}</span>` : ""}
+        <span class="date">${formatDateLong(n.date)}</span>
+        ${n.category ? `<span class="cat">${n.category}</span>` : ""}
       </div>
       <h2>${n.title}</h2>
       ${n.content ? `<div class="content">${md(n.content)}</div>` : ""}
-      ${n.link_url ? `<a class="text-link" href="${n.link_url}" target="_blank" rel="noopener noreferrer" style="margin-top:1rem">Read more ${ICONS.external}</a>` : ""}
+      ${n.link_url ? `<a class="read-more" href="${n.link_url}" target="_blank" rel="noopener noreferrer">Read more ${ICONS.external}</a>` : ""}
     </article>`).join("");
 }
 
