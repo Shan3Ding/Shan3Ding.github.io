@@ -23,6 +23,7 @@ const NAV = [
   { label: "III.", key: "nav.cv", path: "/cv/" },
   { label: "IV.", key: "nav.gallery", path: "/gallery/" },
   { label: "V.", key: "nav.news", path: "/news/" },
+  { label: "VI.", key: "openings.label", path: "/#openings" },
 ];
 
 const TOPICS = [
@@ -63,6 +64,7 @@ const jsonCache = {};
 
 function pathFor(href) {
   if (href === "/") return new URL("./", ROOT).href;
+  if (href.startsWith("/#")) return new URL("./", ROOT).href + href.slice(1);
   return new URL(href.replace(/^\//, ""), ROOT).href;
 }
 
@@ -96,6 +98,7 @@ function langSwitch() {
 
 function injectChrome() {
   const here = currentPath();
+  const hash = window.location.hash;
   const header = document.getElementById("site-header");
   header.innerHTML = `
     <header class="site-header">
@@ -116,11 +119,16 @@ function injectChrome() {
         <button class="overlay-close" type="button" id="close-index" aria-label="${t("nav.close")}">${ICONS.close}</button>
       </div>
       <div class="overlay-nav">
-        ${NAV.map((item) => `
-          <a class="overlay-link${here === item.path ? " is-active" : ""}" href="${pathFor(item.path)}">
+        ${NAV.map((item) => {
+          const active = item.path === "/#openings"
+            ? here === "/" && hash === "#openings"
+            : here === item.path && !(item.path === "/" && hash === "#openings");
+          return `
+          <a class="overlay-link${active ? " is-active" : ""}" href="${pathFor(item.path)}">
             <span class="num">${item.label}</span>
             <span class="label">${t(item.key)}</span>
-          </a>`).join("")}
+          </a>`;
+        }).join("")}
       </div>
     </nav>
   `;
@@ -143,6 +151,7 @@ function injectChrome() {
               <a href="${pathFor("/cv/")}">${t("nav.cv")}</a>
               <a href="${pathFor("/gallery/")}">${t("nav.gallery")}</a>
               <a href="${pathFor("/news/")}">${t("nav.news")}</a>
+              <a href="${pathFor("/#openings")}">${t("openings.label")}</a>
             </nav>
           </div>
         </div>
@@ -344,6 +353,12 @@ async function renderNews() {
     </article>`).join("");
 }
 
+function youtubeId(url) {
+  if (!url) return "";
+  const m = String(url).match(/(?:v=|youtu\.be\/|embed\/)([A-Za-z0-9_-]{11})/);
+  return m ? m[1] : "";
+}
+
 async function renderGallery() {
   const items = await loadJSON("gallery");
   document.getElementById("gallery-count").textContent = t("gallery.figures", { n: items.length });
@@ -354,16 +369,27 @@ async function renderGallery() {
     el.innerHTML = `<p class="empty">${t("gallery.empty")}</p>`;
     return;
   }
-  el.innerHTML = `<div class="gallery-grid">${items.map((n) => `
-    <article class="gallery-card">
-      ${n.media_type === "animation"
-        ? `<video src="${n.file_url}" autoplay loop muted playsinline></video>`
-        : `<img src="${n.file_url}" alt="${n.title || ""}">`}
-      <div class="cap"><div class="cap-inner">
-        <span>${n.media_type === "animation" ? t("gallery.living") : t("gallery.figure")}</span>
-        <h3>${n.title || ""}</h3>
-      </div></div>
-    </article>`).join("")}</div>`;
+  el.innerHTML = `<div class="gallery-grid">${items.map((n) => {
+    const title = pick(n, "title") || n.title || "";
+    const yt = n.media_type === "youtube" ? youtubeId(n.file_url) : "";
+    let media = "";
+    if (yt) {
+      media = `<iframe src="https://www.youtube.com/embed/${yt}?rel=0" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    } else if (n.media_type === "animation") {
+      media = `<video src="${n.file_url}" autoplay loop muted playsinline></video>`;
+    } else {
+      media = `<img src="${n.file_url}" alt="${title}">`;
+    }
+    const kind = yt || n.media_type === "animation" ? t("gallery.living") : t("gallery.figure");
+    return `
+    <article class="gallery-card${yt ? " is-video" : ""}">
+      <div class="gallery-media">${media}</div>
+      <div class="gallery-cap">
+        <span>${kind}</span>
+        <h3>${title}</h3>
+      </div>
+    </article>`;
+  }).join("")}</div>`;
 }
 
 function boot() {

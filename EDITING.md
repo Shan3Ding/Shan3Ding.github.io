@@ -132,7 +132,7 @@ git push
 
 ## 5. 增加 / 删除 Gallery
 
-现在 Gallery 是空的。图片请放到 `assets/gallery/`（没有这个文件夹就新建一个），然后编辑 `data/gallery.json`。
+现在 Gallery 已有牛津主页对应的图与视频。新增时把文件放到 `assets/gallery/`，再编辑 `data/gallery.json`。
 
 ### 增加一张图
 
@@ -161,7 +161,7 @@ git push
 }
 ```
 
-`media_type` 只能是 `image` 或 `animation`。
+`media_type` 只能是 `image`、`animation` 或 `youtube`。YouTube 条目把 `file_url` 写成完整视频链接即可。
 
 ### 删除
 

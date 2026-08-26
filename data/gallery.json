@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "title": "Energetics of Zonal Jet Flows in a Thermally Driven Rotating Annulus",
+    "media_type": "youtube",
+    "file_url": "https://www.youtube.com/watch?v=n11SVAL64v8"
+  },
+  {
+    "title": "Collective motion of convective vortices",
+    "media_type": "image",
+    "file_url": "../assets/gallery/collective-motion.png"
+  },
+  {
+    "title": "Bifurcation curve and vorticity pattern",
+    "media_type": "image",
+    "file_url": "../assets/gallery/bifurcation-vortex-pattern.png"
+  },
+  {
+    "title": "Stratified boundary layer in response to the roughness change",
+    "media_type": "image",
+    "file_url": "../assets/gallery/ibl.png"
+  },
+  {
+    "title": "Baroclinic eddies and kinetic energy spectra",
+    "media_type": "image",
+    "file_url": "../assets/gallery/baroclinic-eddies.png"
+  }
+]
