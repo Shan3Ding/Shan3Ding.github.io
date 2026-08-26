@@ -1,106 +1,168 @@
 [
   {
+    "title": "Assistant Professor",
+    "title_zh": "助理教授",
+    "institution": "Fudan University",
+    "institution_zh": "复旦大学",
+    "start_year": 2026,
+    "end_year": null,
+    "category": "position",
+    "email": "dingshanshan@fudan.edu.cn",
+    "description": "From July 2026, lead independent research on thermal effects over rough-wall turbulent boundary layers and large-scale flow structures in geophysical and astrophysical flows, with broad applications to environmental and geophysical fluid dynamics.",
+    "description_zh": "自 2026 年 7 月起，独立开展粗糙壁湍流边界层热效应，以及地球物理与天体物理流动中大尺度结构的研究，并广泛应用于环境与地球物理流体力学。"
+  },
+  {
+    "title": "Poster – EGU General Assembly 2026",
+    "title_zh": "墙报 – EGU General Assembly 2026",
+    "institution": "European Geosciences Union",
+    "institution_zh": "European Geosciences Union",
+    "start_year": 2026,
+    "end_year": null,
+    "category": "service",
+    "description": "Presented the poster “Emergence of Robust Zonal Jets in a Differentially Heated Rotating Annulus” (EGU26-19406) at the EGU General Assembly 2026, Vienna, 3–8 May 2026. A video of the presentation is available on YouTube.",
+    "description_zh": "在 EGU General Assembly 2026（维也纳，2026 年 5 月 3–8 日）报告墙报 “Emergence of Robust Zonal Jets in a Differentially Heated Rotating Annulus”（EGU26-19406）。报告视频见 YouTube。"
+  },
+  {
     "title": "Oral Presentation – Geophysical and Astrophysical Fluid Dynamics Conference",
+    "title_zh": "口头报告 – Geophysical and Astrophysical Fluid Dynamics Conference",
     "institution": "International",
+    "institution_zh": "国际",
     "start_year": 2025,
     "end_year": null,
     "category": "service",
-    "description": "Oral report at the Geophysical and Astrophysical Fluid Dynamics Conference."
+    "description": "Oral report at the Geophysical and Astrophysical Fluid Dynamics Conference.",
+    "description_zh": "在 Geophysical and Astrophysical Fluid Dynamics Conference 作口头报告。"
   },
   {
     "title": "Oral Presentation – Dynamics of Rotating Fluids Conference",
+    "title_zh": "口头报告 – Dynamics of Rotating Fluids Conference",
     "institution": "International",
+    "institution_zh": "国际",
     "start_year": 2024,
     "end_year": null,
     "category": "service",
-    "description": "Oral report at the Dynamics of Rotating Fluids Conference."
+    "description": "Oral report at the Dynamics of Rotating Fluids Conference.",
+    "description_zh": "在 Dynamics of Rotating Fluids Conference 作口头报告。"
   },
   {
     "title": "Postdoctoral Research Associate",
+    "title_zh": "博士后研究员",
     "institution": "University of Oxford",
+    "institution_zh": "牛津大学",
     "start_year": 2023,
-    "end_year": null,
+    "end_year": 2026,
     "category": "position",
-    "description": "Designed and constructed a 600 rpm rotating platform to study the baroclinically driven zonal jet flows under the EPSRC grant 'Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection'."
+    "description": "Designed and constructed a 600 rpm rotating platform to study the baroclinically driven zonal jet flows under the EPSRC grant 'Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection'.",
+    "description_zh": "在 EPSRC 项目 “Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection” 支持下，设计并搭建转速达 600 rpm 的旋转实验平台，研究斜压驱动的纬向急流。"
   },
   {
     "title": "Poster – 11th International Conference on Urban Climate",
+    "title_zh": "墙报 – 11th International Conference on Urban Climate",
     "institution": "International",
+    "institution_zh": "国际",
     "start_year": 2023,
     "end_year": null,
     "category": "service",
-    "description": "Poster presentation at the 11th International Conference on Urban Climate."
+    "description": "Poster presentation at the 11th International Conference on Urban Climate.",
+    "description_zh": "在 11th International Conference on Urban Climate 作墙报报告。"
   },
   {
     "title": "EPSRC Grant: Rapidly Rotating Thermal Convection",
+    "title_zh": "EPSRC 项目：Rapidly Rotating Thermal Convection",
     "institution": "University of Oxford",
+    "institution_zh": "牛津大学",
     "start_year": 2023,
     "end_year": null,
     "category": "grant",
-    "description": "Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection."
+    "description": "Characterise flow regimes and transitions, heat transport and energy/enstrophy cascades in rapidly rotating thermal convection.",
+    "description_zh": "研究快速旋转热对流中的流态与转捩、热量输运以及能量/拟能级串。"
   },
   {
     "title": "Oral Presentation – 14th European Fluid Mechanics Conference",
+    "title_zh": "口头报告 – 14th European Fluid Mechanics Conference",
     "institution": "International",
+    "institution_zh": "国际",
     "start_year": 2022,
     "end_year": null,
     "category": "service",
-    "description": "Oral report at the 14th European Fluid Mechanics Conference."
+    "description": "Oral report at the 14th European Fluid Mechanics Conference.",
+    "description_zh": "在 14th European Fluid Mechanics Conference 作口头报告。"
   },
   {
     "title": "NERC Grant: ASSURE",
+    "title_zh": "NERC 项目：ASSURE",
     "institution": "University of Surrey",
+    "institution_zh": "萨里大学",
     "start_year": 2022,
     "end_year": 2023,
     "category": "grant",
-    "description": "Across-Scale processeS in URban Environments (NE/W002825/1) – studying the development of internal boundary layers in urban environments."
+    "description": "Across-Scale processeS in URban Environments (NE/W002825/1) – studying the development of internal boundary layers in urban environments.",
+    "description_zh": "Across-Scale processeS in URban Environments（NE/W002825/1）——研究城市环境中内部边界层的发展。"
   },
   {
     "title": "Postdoctoral Research Fellow",
+    "title_zh": "博士后研究员",
     "institution": "University of Surrey",
+    "institution_zh": "萨里大学",
     "start_year": 2022,
     "end_year": 2023,
     "category": "position",
-    "description": "Conducted wind-tunnel experiments to study the development of internal boundary layers under the NERC grant 'Across-scale processes in urban environments'."
+    "description": "Conducted wind-tunnel experiments to study the development of internal boundary layers under the NERC grant 'Across-scale processes in urban environments'.",
+    "description_zh": "在 NERC 项目 “Across-scale processes in urban environments” 支持下，通过风洞实验研究内部边界层的发展。"
   },
   {
     "title": "Teaching: Aerodynamic Instability Demonstration",
+    "title_zh": "教学：气动不稳定性演示",
     "institution": "University",
+    "institution_zh": "大学",
     "start_year": 2021,
     "end_year": null,
     "category": "service",
-    "description": "Aerodynamic instability demonstration and wave tank demonstration."
+    "description": "Aerodynamic instability demonstration and wave tank demonstration.",
+    "description_zh": "气动不稳定性演示与水槽演示。"
   },
   {
     "title": "Visiting Researcher",
+    "title_zh": "访问学者",
     "institution": "Imperial College London",
+    "institution_zh": "帝国理工学院",
     "start_year": 2021,
     "end_year": 2022,
     "category": "position",
-    "description": "Applied planar PIV and stereo PIV techniques in a wind tunnel to study the wake dynamics of porous disks and to model the wake meandering."
+    "description": "Applied planar PIV and stereo PIV techniques in a wind tunnel to study the wake dynamics of porous disks and to model the wake meandering.",
+    "description_zh": "在风洞中应用平面 PIV 与立体 PIV，研究多孔盘尾迹动力学并建立尾迹摆动模型。"
   },
   {
     "title": "Oral Presentation – 71st APS Division of Fluid Dynamics",
+    "title_zh": "口头报告 – 71st APS Division of Fluid Dynamics",
     "institution": "American Physical Society",
+    "institution_zh": "American Physical Society",
     "start_year": 2018,
     "end_year": null,
     "category": "service",
-    "description": "Oral report at the 71st Annual APS Meeting, Division of Fluid Dynamics."
+    "description": "Oral report at the 71st Annual APS Meeting, Division of Fluid Dynamics.",
+    "description_zh": "在 71st Annual APS Meeting, Division of Fluid Dynamics 作口头报告。"
   },
   {
     "title": "Ph.D. in Physics",
+    "title_zh": "物理学博士",
     "institution": "Tongji University, China",
+    "institution_zh": "同济大学",
     "start_year": 2016,
     "end_year": 2021,
     "category": "education",
-    "description": "Designed and conducted PIV and numerical experiments under multiple NSFC grants, studying large-scale vortex structures, vortex dynamics, and thermal boundary layers in rotating Rayleigh-Bénard convection."
+    "description": "Designed and conducted PIV and numerical experiments under multiple NSFC grants, studying large-scale vortex structures, vortex dynamics, and thermal boundary layers in rotating Rayleigh-Bénard convection.",
+    "description_zh": "在多项国家自然科学基金支持下，设计并完成 PIV 与数值实验，研究旋转 Rayleigh–Bénard 对流中的大尺度涡结构、涡动力学与热边界层。"
   },
   {
     "title": "B.Sc. in Applied Physics",
+    "title_zh": "应用物理学学士",
     "institution": "Tongji University, China",
+    "institution_zh": "同济大学",
     "start_year": 2012,
     "end_year": 2016,
     "category": "education",
-    "description": "Excellent Graduate of Shanghai."
+    "description": "Excellent Graduate of Shanghai.",
+    "description_zh": "上海市优秀毕业生。"
   }
 ]

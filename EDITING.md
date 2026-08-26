@@ -40,7 +40,8 @@ git push
 | 新闻 | `data/news.json` |
 | 相册 | `data/gallery.json` + `assets/` 里的图片 |
 | 简历条目 | `data/cv.json` |
-| 主页姓名、简介、研究方向 | `index.html` |
+| 主页姓名、简介、研究方向、招生 | `index.html` |
+| 中英文界面文案 | `js/i18n.js` |
 | 主页背景图 | `assets/hero.jpeg` |
 | 主页简介旁的照片 | `assets/portrait.jpg` |
 | 页眉名字、邮箱、页脚文字 | `js/site.js` |
@@ -107,15 +108,18 @@ git push
 {
   "date": "2026-09-01",
   "title": "Short headline",
+  "title_zh": "中文标题",
   "category": "publication",
-  "content": "You can use *italic* and **bold**.",
+  "content": "You can use *italic*, **bold**, and [links](https://example.com).",
+  "content_zh": "中文正文。论文题目、期刊名、报道标题保持英文原文。",
   "link_url": "https://doi.org/10.xxxx/xxxxx",
   "pinned": false
 }
 ```
 
 - `date` 格式必须是 `YYYY-MM-DD`。
-- `category` 常用：`publication`、`talk`、`award`、`opening`。会显示在日期旁边。
+- `category` 常用：`publication`、`press`、`talk`、`award`、`opening`。会显示在日期旁边。
+- `title_zh` / `content_zh` 供中文界面使用；论文题目、期刊名、会议名、报道标题等专有名词保持英文。
 - `pinned: true` 会在 News 页显示 Pinned 标签。
 - 没有外链时：`"link_url": null`。
 - 主页自动显示日期最新的 3 条。
@@ -189,18 +193,20 @@ git push
 |---|---|
 | 大标题姓名 | `Shan-Shan Ding`（`<h1>` 那一行） |
 | 研究方向关键词 | `Fluid Dynamics · Geophysical Turbulence · Atmospheric Flows` |
-| 简介 | `Postdoctoral Research Associate, studying...` |
-| 单位 | `University of Oxford` |
+| 简介 | `Assistant Professor, leading independent research...`（中文在 `js/i18n.js` 的 `hero.bio`） |
+| 单位 | `Fudan University` |
 | 当前课题 | `Thermal effect in geophysical turbulence` |
+| 招生信息 | `#openings` 这一段 |
 | 浏览器标签标题 | `<title>ScholarsArchive</title>` |
 
-页眉左上角的短名 `S.-S. Ding`、页脚邮箱、页脚欢迎语在 `js/site.js` 里，搜：
+页眉左上角的短名 `S.-S. Ding`、页脚邮箱在 `js/site.js` 里，搜：
 
 - `S.-S. Ding`
-- `shanshan.ding@physics.ox.ac.uk`
-- `Let's Collaborate`
+- `dingshanshan@fudan.edu.cn`
 
-改邮箱时，`mailto:` 后面的地址和显示出来的文字都要改。
+中英文界面文案（导航、页脚、招生、按钮）在 `js/i18n.js`。右上角 EN / 中文 切换后会记住选择。论文题目、作者、期刊、摘要始终保持英文。
+
+改邮箱时，`index.html`、`js/site.js` 里的 `EMAIL`、以及 `data/cv.json` 复旦条目的 `email` 都要改。
 
 ---
 
@@ -210,12 +216,16 @@ git push
 
 ```json
 {
-  "title": "Postdoctoral Research Associate",
-  "institution": "University of Oxford",
-  "start_year": 2023,
+  "title": "Assistant Professor",
+  "title_zh": "助理教授",
+  "institution": "Fudan University",
+  "institution_zh": "复旦大学",
+  "start_year": 2026,
   "end_year": null,
   "category": "position",
-  "description": "One or two sentences about what you did."
+  "email": "dingshanshan@fudan.edu.cn",
+  "description": "One or two sentences about what you did.",
+  "description_zh": "中文描述。项目名、会议名等专有名词可保持英文。"
 }
 ```
 
@@ -235,51 +245,22 @@ git push
 
 ---
 
-## 9. 增加新模块（例如招聘信息）
+## 9. 招生信息
 
-有两种做法。招聘信息建议用 **A**，改动最少。
+主页 `#openings` 这一段。英文和中文分别在 `js/i18n.js` 的 `openings.phd`、`openings.postdoc`、`openings.contact`。
 
-### 做法 A：加在主页（推荐）
+邮箱与页脚相同：`dingshanshan@fudan.edu.cn`。
 
-在 `index.html` 里，找到 `Latest News` 那一段 `</section>` 后面，插入：
+---
 
-```html
-<section class="section">
-  <div class="section-grid">
-    <div class="section-label">
-      <span>Openings</span>
-      <div class="theorem-line"></div>
-    </div>
-    <div class="section-main">
-      <h3 class="font-serif" style="font-size:1.5rem;margin:0 0 0.75rem">PhD / Postdoc positions</h3>
-      <p class="text-body" style="color:hsl(var(--muted-foreground));max-width:42rem">
-        I am looking for students and postdocs interested in geostrophic turbulence
-        and laboratory experiments. Please email
-        <a class="link-more" href="mailto:shanshan.ding@physics.ox.ac.uk">shanshan.ding@physics.ox.ac.uk</a>
-        with a CV.
-      </p>
-    </div>
-  </div>
-</section>
-```
+## 10. 中英文切换
 
-把段落改成你的招聘正文即可。不想展示时，删掉这一整段 `<section>...</section>`。
+右上角 **EN | 中文**。选择会记在浏览器 `localStorage`（键名 `sa-lang`）。
 
-如果希望招聘条目也能像新闻一样增删，可以新建 `data/openings.json`，再在 `js/site.js` 里仿照 `renderNews()` 写一个读取函数。需要的话可以让我来加。
+- 界面、新闻叙述、简历描述：可写中文对照（`title_zh`、`content_zh`、`description_zh`）。
+- **不翻译**：论文题目、作者、期刊、摘要，以及会议名、报道标题、期刊名等专有名词。
 
-### 做法 B：做成独立页面（Openings）
-
-1. 新建文件夹 `openings/index.html`（可复制 `news/index.html` 再改标题）。
-2. 在 `js/site.js` 顶部的 `NAV` 数组里加一项，例如：
-
-```js
-{ label: "VI.", title: "Openings", path: "/openings/" }
-```
-
-3. 同一文件里，页脚 Site Map 再加一个链接。
-4. 在 `currentPath()` 里加上对 `/openings` 的判断。
-
-导航罗马数字 `I.` `II.` `III.` 请按实际顺序改。
+界面短句改 `js/i18n.js` 里 `en` / `zh` 两套键值。
 
 ---
 

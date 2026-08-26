@@ -137,6 +137,40 @@ video {
 
 .index-btn svg { width: 1.25rem; height: 1.25rem; }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: #fff;
+}
+
+.lang-switch button {
+  color: #fff;
+  opacity: 0.42;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
+.lang-switch button.is-active,
+.lang-switch button:hover {
+  opacity: 1;
+}
+
+.lang-switch .lang-sep { opacity: 0.35; }
+
 @media (max-width: 639px) {
   .index-btn span { display: none; }
 }
@@ -441,6 +475,17 @@ body.nav-open .overlay-panel { transform: translateX(0); }
   color: hsl(var(--primary));
 }
 
+.hero-email {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: hsl(var(--background) / 0.55);
+  letter-spacing: 0.02em;
+}
+
+.hero-email:hover { color: hsl(var(--primary)); }
+
 .hero-focus {
   margin-top: 3rem;
   padding-top: 1.5rem;
@@ -652,6 +697,76 @@ body.nav-open .overlay-panel { transform: translateX(0); }
   color: hsl(var(--muted-foreground));
   margin: 0.5rem 0 0;
   line-height: 1.625;
+}
+
+.news-card a,
+.news-item .content a {
+  color: hsl(var(--foreground));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.news-card a:hover,
+.news-item .content a:hover {
+  color: hsl(var(--primary));
+}
+
+.opening-card {
+  max-width: 38rem;
+  padding: 1.5rem 0;
+}
+
+.opening-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 0.75rem;
+  color: hsl(var(--foreground));
+}
+
+.opening-contact {
+  font-size: 0.875rem !important;
+  color: hsl(var(--muted-foreground)) !important;
+  margin-top: 1.25rem !important;
+}
+
+.opening-contact a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: hsl(var(--primary));
+  margin-left: 0.35rem;
+}
+
+.cv-email {
+  margin: 0.35rem 0 0;
+}
+
+.cv-email a {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: hsl(var(--primary));
+}
+
+html[lang="zh-CN"] {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", var(--font-sans);
+}
+
+html[lang="zh-CN"] .text-hero,
+html[lang="zh-CN"] .text-section,
+html[lang="zh-CN"] .hero-focus p,
+html[lang="zh-CN"] .news-card h3,
+html[lang="zh-CN"] .news-item h2,
+html[lang="zh-CN"] .cv-body h3 {
+  font-family: "Songti SC", "STSong", "Noto Serif SC", "SimSun", var(--font-serif);
+}
+
+html[lang="zh-CN"] .kicker,
+html[lang="zh-CN"] .section-label span,
+html[lang="zh-CN"] .index-btn span,
+html[lang="zh-CN"] .news-meta .cat,
+html[lang="zh-CN"] .cv-meta .cat,
+html[lang="zh-CN"] .chip {
+  text-transform: none;
+  letter-spacing: 0.06em;
 }
 
 .line-clamp-3 {

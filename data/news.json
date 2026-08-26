@@ -1,49 +1,101 @@
 [
   {
+    "date": "2026-07-01",
+    "title": "PRL paper reported in SIAM News: Atmospheric Turbulence in a Jar",
+    "title_zh": "PRL 论文被 SIAM News 报道：Atmospheric Turbulence in a Jar",
+    "category": "press",
+    "content": "Our paper *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence* (S.-S. Ding et al., *Phys. Rev. Lett.* **136**, 114101, 2026) was reported in *SIAM News* as “[Atmospheric Turbulence in a Jar](https://www.siam.org/publications/siam-news/articles/atmospheric-turbulence-in-a-jar/)” (Matthew R. Francis, July/August 2026, Vol. 59, Issue 6).",
+    "content_zh": "我们的论文 *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence*（S.-S. Ding et al.，*Phys. Rev. Lett.* **136**, 114101, 2026）被 *SIAM News* 报道，题为 “[Atmospheric Turbulence in a Jar](https://www.siam.org/publications/siam-news/articles/atmospheric-turbulence-in-a-jar/)”（Matthew R. Francis，2026 年 7/8 月，Vol. 59, Issue 6）。",
+    "link_url": "https://www.siam.org/publications/siam-news/articles/atmospheric-turbulence-in-a-jar/",
+    "pinned": false
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Poster at EGU General Assembly 2026",
+    "title_zh": "在 EGU General Assembly 2026 作墙报报告",
+    "category": "talk",
+    "content": "Presented the poster *Emergence of Robust Zonal Jets in a Differentially Heated Rotating Annulus* (S. Ding and P. Read, [EGU26-19406](https://doi.org/10.5194/egusphere-egu26-19406)) at the EGU General Assembly 2026, held in Vienna, 3–8 May 2026. A video of the presentation, *Energetics of Zonal Jet Flows in a Thermally Driven Rotating Annulus*, is available on [YouTube](https://www.youtube.com/watch?v=n11SVAL64v8).",
+    "content_zh": "在 EGU General Assembly 2026（维也纳，2026 年 5 月 3–8 日）报告墙报 *Emergence of Robust Zonal Jets in a Differentially Heated Rotating Annulus*（S. Ding and P. Read，[EGU26-19406](https://doi.org/10.5194/egusphere-egu26-19406)）。报告视频 *Energetics of Zonal Jet Flows in a Thermally Driven Rotating Annulus* 见 [YouTube](https://www.youtube.com/watch?v=n11SVAL64v8)。",
+    "link_url": "https://www.youtube.com/watch?v=n11SVAL64v8",
+    "pinned": false
+  },
+  {
+    "date": "2026-04-21",
+    "title": "PRL paper reported in Physics Today: A Tabletop Model of Atmospheric Turbulence",
+    "title_zh": "PRL 论文被 Physics Today 报道：A Tabletop Model of Atmospheric Turbulence",
+    "category": "press",
+    "content": "Our paper *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence* (S.-S. Ding et al., *Phys. Rev. Lett.* **136**, 114101, 2026) was reported in *Physics Today* as “[A tabletop model of atmospheric turbulence](https://physicstoday.aip.org/news/a-tabletop-model-of-atmospheric-turbulence)” (21 April 2026).",
+    "content_zh": "我们的论文 *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence*（S.-S. Ding et al.，*Phys. Rev. Lett.* **136**, 114101, 2026）被 *Physics Today* 报道，题为 “[A tabletop model of atmospheric turbulence](https://physicstoday.aip.org/news/a-tabletop-model-of-atmospheric-turbulence)”（2026 年 4 月 21 日）。",
+    "link_url": "https://physicstoday.aip.org/news/a-tabletop-model-of-atmospheric-turbulence",
+    "pinned": false
+  },
+  {
+    "date": "2026-03-20",
+    "title": "PRL paper reported in Physics Focus: A Lab Version of Planetary Atmospheres",
+    "title_zh": "PRL 论文被 Physics Focus 报道：A Lab Version of Planetary Atmospheres",
+    "category": "press",
+    "content": "Our paper *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence* (S.-S. Ding et al., *Phys. Rev. Lett.* **136**, 114101, 2026) was reported in *Physics* (APS Physics Focus) as “[A Lab Version of Planetary Atmospheres](https://physics.aps.org/articles/v19/40)” (Michael Schirber, 20 March 2026; *Physics* **19**, 40).",
+    "content_zh": "我们的论文 *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence*（S.-S. Ding et al.，*Phys. Rev. Lett.* **136**, 114101, 2026）被 *Physics*（APS Physics Focus）报道，题为 “[A Lab Version of Planetary Atmospheres](https://physics.aps.org/articles/v19/40)”（Michael Schirber，2026 年 3 月 20 日；*Physics* **19**, 40）。",
+    "link_url": "https://physics.aps.org/articles/v19/40",
+    "pinned": false
+  },
+  {
     "date": "2026-03-20",
     "title": "PRL paper selected as Editor's Suggestion and Featured in Physics",
+    "title_zh": "PRL 论文入选 Editor's Suggestion，并 Featured in Physics",
     "category": "publication",
-    "content": "Our paper *Stratification-Dependent Enstrophy-Controlled Regime in Geostrophic Turbulence* published in Physical Review Letters (136, 114101, 2026) has been selected as an **Editor's Suggestion** and **Featured in Physics**. The work experimentally reveals how baroclinic instability shapes the k⁻³ energy spectrum in geostrophic turbulence.",
+    "content": "Our paper *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence* (S.-S. Ding et al., *Phys. Rev. Lett.* **136**, 114101, 2026) has been selected as an **Editor's Suggestion** and **Featured in Physics**. The work experimentally reveals how baroclinic instability shapes the k⁻³ energy spectrum in geostrophic turbulence.",
+    "content_zh": "我们的论文 *Stratification-dependent enstrophy-controlled regime in geostrophic turbulence*（S.-S. Ding et al.，*Phys. Rev. Lett.* **136**, 114101, 2026）入选 **Editor's Suggestion**，并 **Featured in Physics**。该工作通过实验揭示了斜压不稳定性如何塑造地转湍流中的 k⁻³ 能量谱。",
     "link_url": "https://doi.org/10.1103/n2nj-dg5r",
     "pinned": true
   },
   {
     "date": "2025-06-01",
     "title": "Oral presentation at the Geophysical and Astrophysical Fluid Dynamics Conference",
+    "title_zh": "在 Geophysical and Astrophysical Fluid Dynamics Conference 作口头报告",
     "category": "talk",
     "content": "Presented our latest results on zonal jet flows and geostrophic turbulence in the rotating annulus experiment at the Geophysical and Astrophysical Fluid Dynamics Conference.",
+    "content_zh": "在 Geophysical and Astrophysical Fluid Dynamics Conference 报告旋转环槽实验中纬向急流与地转湍流的最新结果。",
     "link_url": null,
     "pinned": false
   },
   {
     "date": "2025-05-01",
     "title": "New paper published: Predicting IBL growth in stratified boundary layers",
+    "title_zh": "新论文发表：分层边界层中 IBL 增长的预测",
     "category": "publication",
-    "content": "Our paper *Predicting full growth of internal boundary layers induced by a roughness change in neutrally and stably stratified circumstances* is published in Journal of Fluid Mechanics (1016: R4, 2025).",
+    "content": "Our paper *Predicting full growth of internal boundary layers induced by a roughness change in neutrally and stably stratified circumstances* is published in *Journal of Fluid Mechanics* (1016: R4, 2025).",
+    "content_zh": "我们的论文 *Predicting full growth of internal boundary layers induced by a roughness change in neutrally and stably stratified circumstances* 发表于 *Journal of Fluid Mechanics*（1016: R4, 2025）。",
     "link_url": "https://doi.org/10.1017/jfm.2025.10293",
     "pinned": false
   },
   {
     "date": "2024-11-20",
     "title": "Paper published in Measurement Science and Technology",
+    "title_zh": "论文发表于 Measurement Science and Technology",
     "category": "publication",
-    "content": "*Turbulence statistics estimation across a step change in roughness via interpretable network-based modelling* published in Meas. Sci. Technol. 36(1): 016026 (2025), with collaborators at University of Surrey.",
+    "content": "*Turbulence statistics estimation across a step change in roughness via interpretable network-based modelling* published in *Meas. Sci. Technol.* 36(1): 016026 (2025), with collaborators at University of Surrey.",
+    "content_zh": "*Turbulence statistics estimation across a step change in roughness via interpretable network-based modelling* 发表于 *Meas. Sci. Technol.* 36(1): 016026 (2025)，合作者来自 University of Surrey。",
     "link_url": "https://doi.org/10.1088/1361-6501/ad9046",
     "pinned": false
   },
   {
     "date": "2024-05-01",
     "title": "New JFM paper on stratified boundary layer statistics",
+    "title_zh": "JFM 新论文：分层边界层统计性质",
     "category": "publication",
-    "content": "*Statistical properties of neutrally and stably stratified boundary layers in response to an abrupt change in surface roughness* published in Journal of Fluid Mechanics 986, A4 (2024).",
+    "content": "*Statistical properties of neutrally and stably stratified boundary layers in response to an abrupt change in surface roughness* published in *Journal of Fluid Mechanics* 986, A4 (2024).",
+    "content_zh": "*Statistical properties of neutrally and stably stratified boundary layers in response to an abrupt change in surface roughness* 发表于 *Journal of Fluid Mechanics* 986, A4 (2024)。",
     "link_url": "https://doi.org/10.1017/jfm.2024.329",
     "pinned": false
   },
   {
     "date": "2024-01-01",
     "title": "Oral presentation at the Dynamics of Rotating Fluids Conference",
+    "title_zh": "在 Dynamics of Rotating Fluids Conference 作口头报告",
     "category": "talk",
     "content": "Presented our work on rotating turbulence and zonal jet flows at the Dynamics of Rotating Fluids Conference.",
+    "content_zh": "在 Dynamics of Rotating Fluids Conference 报告旋转湍流与纬向急流方面的工作。",
     "link_url": null,
     "pinned": false
   }

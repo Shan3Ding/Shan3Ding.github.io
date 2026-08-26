@@ -6,6 +6,13 @@
   <title>cv | ScholarsArchive</title>
   <link rel="icon" href="../assets/favicon.png">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("sa-lang") === "zh") document.documentElement.lang = "zh-CN";
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body data-page="cv">
   <div class="page">
@@ -14,7 +21,7 @@
       <div class="inner-grid">
         <div class="inner-side">
           <div class="inner-side-sticky">
-            <h1 class="text-section">Curriculum Vitae</h1>
+            <h1 class="text-section" data-i18n="page.cv">Curriculum Vitae</h1>
             <p class="page-count" id="cv-count"></p>
             <div class="side-filters" id="cv-filters"></div>
             <div class="year-list" id="cv-years"></div>

@@ -6,6 +6,13 @@
   <title>publications | ScholarsArchive</title>
   <link rel="icon" href="../assets/favicon.png">
   <link rel="stylesheet" href="../css/style.css">
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("sa-lang") === "zh") document.documentElement.lang = "zh-CN";
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body data-page="publications">
   <div class="page">
@@ -13,7 +20,7 @@
     <main class="inner">
       <div class="inner-grid">
         <div class="inner-side">
-          <h1 class="text-section">Publications</h1>
+          <h1 class="text-section" data-i18n="page.publications">Publications</h1>
           <p class="page-count" id="pub-count"></p>
         </div>
         <div class="inner-main">
