@@ -82,7 +82,7 @@ export const I18N = {
     "home.latestNews": "最新动态",
     "home.viewAllPubs": "全部论文",
     "home.allNews": "全部新闻",
-    "openings.label": "招收人员",
+    "openings.label": "招聘职位",
     "openings.phd": "今年有流体力学方向博士生名额 1 名。",
     "openings.postdoc": "长期欢迎申请博士后岗位的研究人员联系。",
     "openings.contact": "请将材料发送至",
