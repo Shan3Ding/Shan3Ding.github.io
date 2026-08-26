@@ -4,7 +4,7 @@
     "authors": "S.-S. Ding, H. Bobas, H. Scolan, R. M. B. Young, and P. L. Read",
     "journal": "Physical Review Letters 136, 114101",
     "year": 2026,
-    "topic": "other",
+    "topic": "geostrophic_turbulence",
     "doi": "10.1103/n2nj-dg5r",
     "abstract": "We experimentally measure geostrophic turbulence in a rotating, differentially heated fluid annulus. The horizontal kinetic energy spectra exhibit a range at low wave number which scales as k⁻³, with spectral amplitude that correlates with the square of the Brunt-Väisälä frequency. The observed turbulent state exhibits a forward enstrophy cascade with bidirectional energy transfer.",
     "citation_count": 0,
@@ -16,119 +16,119 @@
     "authors": "S.-S. Ding, M. Carpentieri, A. Robins, M. Placidi",
     "journal": "Journal of Fluid Mechanics 1016: R4",
     "year": 2025,
-    "topic": "other",
     "doi": "10.1017/jfm.2025.10293",
     "abstract": "This study uses the diffusion analogy to predict the full growth behaviour of internal boundary layers (IBLs) induced by a roughness change for neutrally and stably stratified boundary layers with finite thickness.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "boundary_layers"
   },
   {
     "title": "Turbulence statistics estimation across a step change in roughness via interpretable network-based modelling",
     "authors": "G. Iacobello, M. Placidi, S.-S. Ding and M. Carpentieri",
     "journal": "Measurement Science and Technology 36(1): 016026",
     "year": 2025,
-    "topic": "other",
     "doi": "10.1088/1361-6501/ad9046",
     "abstract": "This study proposes a data-driven methodology to complement existing time-series measurement tools for turbulent flows. A cluster-based transition network model is employed for the estimation of velocity time traces and their corresponding statistics.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "boundary_layers"
   },
   {
     "title": "Statistical properties of neutrally and stably stratified boundary layers in response to an abrupt change in surface roughness",
     "authors": "S.-S. Ding, M. Carpentieri, A. Robins, M. Placidi",
     "journal": "Journal of Fluid Mechanics 986, A4",
     "year": 2024,
-    "topic": "other",
     "doi": "10.1017/jfm.2024.329",
     "abstract": "We conducted experimental investigations on the effect of stable thermal conditions on rough-wall boundary layers, with a specific focus on their response to abrupt increases in surface roughness. A new analytical relation between the skin-friction coefficient and the displacement thickness was proposed for stably stratified boundary layers.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "boundary_layers"
   },
   {
     "title": "Vortex dynamics in rotating Rayleigh–Bénard convection",
     "authors": "S.-S. Ding, G.-Y. Ding, K.-L. Chong, W.-T. Wu, K.-Q. Xia, J.-Q. Zhong",
     "journal": "Journal of Fluid Mechanics 974, A43",
     "year": 2023,
-    "topic": "other",
     "doi": "10.1017/jfm.2023.852",
     "abstract": "We investigate the spatial distribution and dynamics of vortices in rotating Rayleigh–Bénard convection in a reduced Rayleigh number range 1.3 ≤ Ra/Rac ≤ 83.1, revealing four distinct flow regimes and a power-law scaling between vortex mobility and Froude number.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "vortex_dynamics"
   },
   {
     "title": "Neutrally and stably stratified boundary layers adjustments to a step change in surface roughness",
     "authors": "S.-S. Ding, M. Placidi, M. Carpentieri, A. Robins",
     "journal": "Experiments in Fluids 64, 86",
     "year": 2023,
-    "topic": "other",
     "doi": "10.1007/s00348-023-03626-7",
     "abstract": "We study the development of the internal boundary layer (IBL) induced by a surface roughness discontinuity in both thermally neutral and stable cases. A modified diffusion model incorporating vertical advection effects is proposed.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "boundary_layers"
   },
   {
     "title": "Vortex patterns in rapidly rotating Rayleigh–Bénard convection under spatial periodic forcing",
     "authors": "S.-S. Ding, D.-T. Chen, H.-L. Zhang, J.-Q. Zhong",
     "journal": "Journal of Fluid Mechanics 950, R1",
     "year": 2022,
-    "topic": "other",
     "doi": "10.1017/jfm.2022.780",
     "abstract": "We present experimental studies of pattern formation and selection by spatial periodic forcing in rapidly rotating convection. Symmetric convection patterns in the form of regular vortex lattices are observed near the onset of convection.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "rotating_convection"
   },
   {
     "title": "Inverse centrifugal effect induced by collective motion of vortices in rotating turbulent convection",
     "authors": "S.-S. Ding, K.-L. Chong, J.-Q. Shi, G.-Y. Ding, H.-Y. Lu, K.-Q. Xia, J.-Q. Zhong",
     "journal": "Nature Communications 12.1, 1-7",
     "year": 2021,
-    "topic": "other",
     "doi": "10.1038/s41467-021-25838-3",
     "abstract": "We demonstrate both experimentally and numerically the existence of an unexpected outward motion of warm and lighter vortices in rotating thermal convection, caused by long-range correlated collective motion of densely distributed vortices.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "vortex_dynamics"
   },
   {
     "title": "Vortices as Brownian particles in turbulent flows",
     "authors": "K.-L. Chong, J.-Q. Shi, G.-Y. Ding, S.-S. Ding, J.-Q. Zhong, K.-Q. Xia",
     "journal": "Science Advances 6, 34",
     "year": 2020,
-    "topic": "other",
     "doi": "10.1126/sciadv.aaz1110",
     "abstract": "We demonstrate through experiment and numerical simulation that vortices in rotating turbulent convective flow resemble inertial Brownian particles, transitioning directly from ballistic to diffusive motion without the hydrodynamic memory regime.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "vortex_dynamics"
   },
   {
     "title": "Fine vortex structure and flow transition to the geostrophic regime in rotating Rayleigh-Bénard convection",
     "authors": "J.-Q. Shi, H.-Y. Lu, S.-S. Ding, J.-Q. Zhong",
     "journal": "Physical Review Fluids 5, 011501(R)",
     "year": 2020,
-    "topic": "other",
     "doi": "10.1103/PhysRevFluids.5.011501",
     "abstract": "We present spatially resolved measurements of the columnar vortex structures in rotating Rayleigh-Bénard convection and evidence of a flow transition from weakly rotating convection to geostrophic convection.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "rotating_convection"
   },
   {
     "title": "Temperature fluctuations relevant to thermal plume dynamics in turbulent rotating Rayleigh-Bénard convection",
     "authors": "S.-S. Ding, H.-M. Li, W.-D. Yan and J.-Q. Zhong",
     "journal": "Physical Review Fluids 4, 023501",
     "year": 2019,
-    "topic": "other",
     "doi": "10.1103/PhysRevFluids.4.023501",
     "abstract": "We present measurements of temperature fluctuations in turbulent rotating Rayleigh-Bénard convection and derive a general theoretical expression for all statistical moments of temperature in terms of the dynamical properties of thermal plumes.",
     "citation_count": 0,
     "featured": false,
-    "pdf_url": null
+    "pdf_url": null,
+    "topic": "rotating_convection"
   }
 ]

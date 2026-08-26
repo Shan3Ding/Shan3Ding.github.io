@@ -88,6 +88,7 @@ video {
 
 .theorem-line {
   height: 0.5px;
+  width: 3rem;
   background: hsl(var(--border));
 }
 
