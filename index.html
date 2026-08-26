@@ -6,7 +6,7 @@
   <title>ScholarsArchive</title>
   <meta name="description" content="Shan-Shan Ding — Assistant Professor at Fudan University. Fluid dynamics, geostrophic turbulence, and atmospheric flows.">
   <link rel="icon" href="assets/favicon.png">
-  <link rel="stylesheet" href="css/style.css?v=5">
+  <link rel="stylesheet" href="css/style.css?v=16">
   <script>
     (function () {
       try {
@@ -21,7 +21,7 @@
     <main>
       <section class="hero">
         <div class="hero-bg">
-          <img src="assets/hero.jpeg" alt="Abstract research visualization">
+          <img src="assets/hero.jpeg?v=9" alt="Rotating annulus flow visualization">
         </div>
         <div class="hero-content">
           <div class="hero-intro">
@@ -42,29 +42,29 @@
         </div>
       </section>
 
-      <section class="section section-muted">
-        <div class="section-grid">
-          <div class="section-label">
-            <span data-i18n="home.recentPubs">Recent Publications</span>
-            <div class="theorem-line"></div>
-          </div>
-          <div class="section-main pub-group" id="recent-pubs"></div>
+      <section class="section section-timeline section-muted">
+        <div class="tl-legend">
+          <span class="tl-kicker tl-kicker-news" data-i18n="home.latestNews">Latest News</span>
         </div>
-      </section>
-
-      <section class="section">
-        <div class="section-grid">
-          <div class="section-label">
-            <span data-i18n="home.latestNews">Latest News</span>
-            <div class="theorem-line"></div>
-          </div>
-          <div class="section-main news-grid" id="latest-news"></div>
+        <div class="tl-wrap">
+          <div class="tl-axis" aria-hidden="true"><span class="tl-arrow"></span></div>
+          <ol class="tl" id="home-timeline"></ol>
         </div>
-        <div class="news-all">
+        <div class="tl-more">
           <a class="link-more" href="news/">
             <span data-i18n="home.allNews">All news</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
+        </div>
+      </section>
+
+      <section class="section section-selected">
+        <div class="section-grid">
+          <div class="section-label">
+            <span data-i18n="home.selectedPubs">Selected Publications</span>
+            <div class="theorem-line"></div>
+          </div>
+          <div class="section-main pub-group pub-tight" id="selected-pubs"></div>
         </div>
       </section>
 
@@ -89,6 +89,6 @@
     </main>
     <div id="site-footer"></div>
   </div>
-  <script type="module" src="js/site.js?v=5"></script>
+  <script type="module" src="js/site.js?v=16"></script>
 </body>
 </html>

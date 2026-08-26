@@ -204,6 +204,12 @@ function bindOnce(el, type, fn, flag = "bound") {
   el.addEventListener(type, fn);
 }
 
+function assetHref(path) {
+  if (!path) return "";
+  if (/^https?:\/\//i.test(path)) return path;
+  return new URL(String(path).replace(/^\.\.\//, "").replace(/^\//, ""), ROOT).href;
+}
+
 function pubCard(p, { abstract = false, doi = false } = {}) {
   const doiHref = p.doi ? `https://doi.org/${p.doi}` : null;
   return `
@@ -223,24 +229,65 @@ function pubCard(p, { abstract = false, doi = false } = {}) {
     </article>`;
 }
 
+const SELECTED_SPEC = [
+  { year: 2026, re: /Physical Review Letters/i },
+  { year: 2025, re: /Journal of Fluid Mechanics/i },
+  { year: 2024, re: /Journal of Fluid Mechanics/i },
+  { year: 2023, re: /Journal of Fluid Mechanics/i },
+  { year: 2022, re: /Journal of Fluid Mechanics/i },
+  { year: 2021, re: /Nature Communications/i },
+  { year: 2019, re: /Physical Review Fluids/i },
+];
+
+function selectedPubs(pubs) {
+  const flagged = pubs
+    .filter((p) => p.selected)
+    .sort((a, b) => (a.selected_order || 99) - (b.selected_order || 99));
+  if (flagged.length) return flagged;
+  return SELECTED_SPEC.map((s) => pubs.find((p) => p.year === s.year && s.re.test(p.journal))).filter(Boolean);
+}
+
+function timelineNewsCard(n) {
+  const img = n.image
+    ? `<img class="tl-img" src="${assetHref(n.image)}" alt="">`
+    : "";
+  const title = n.link_url
+    ? `<a href="${n.link_url}" target="_blank" rel="noopener noreferrer">${pick(n, "title")}</a>`
+    : pick(n, "title");
+  return `
+    <div class="tl-panel">
+      <div class="tl-date-row">
+        <time class="tl-date" datetime="${n.date || ""}">${formatDate(n.date)}</time>
+      </div>
+      <div class="tl-body">
+        ${n.category ? `<span class="tl-cat">${catLabel(n.category)}</span>` : ""}
+        <h3>${title}</h3>
+        <p class="tl-excerpt">${md(pick(n, "content"))}</p>
+        ${img}
+      </div>
+    </div>`;
+}
+
 async function renderHome() {
   const [pubs, news] = await Promise.all([loadJSON("publications"), loadJSON("news")]);
-  const recent = [...pubs].sort((a, b) => b.year - a.year).slice(0, 4);
-  const latest = [...news].sort((a, b) => (b.date || "").localeCompare(a.date || "")).slice(0, 3);
+  const latestNews = [...news]
+    .map((n, idx) => ({ n, idx }))
+    .sort((a, b) => (b.n.date || "").localeCompare(a.n.date || "") || a.idx - b.idx)
+    .slice(0, 5)
+    .sort((a, b) => {
+      const d = (a.n.date || "").localeCompare(b.n.date || "");
+      if (d) return d;
+      return a.idx - b.idx;
+    });
 
-  document.getElementById("recent-pubs").innerHTML =
-    recent.map((p) => pubCard(p)).join("") +
+  document.getElementById("home-timeline").innerHTML = latestNews.map(({ n }) =>
+    `<li class="tl-item is-news">${timelineNewsCard(n)}<span class="tl-node" aria-hidden="true"></span></li>`
+  ).join("");
+
+  const chosen = selectedPubs(pubs);
+  document.getElementById("selected-pubs").innerHTML =
+    chosen.map((p) => pubCard(p, { doi: true })).join("") +
     `<a class="link-more" href="${pathFor("/publications/")}">${t("home.viewAllPubs")} ${ICONS.arrow}</a>`;
-
-  document.getElementById("latest-news").innerHTML = latest.map((n) => `
-    <article class="news-card">
-      <div class="news-meta">
-        <span class="date">${formatDate(n.date)}</span>
-        ${n.category ? `<span class="cat">${catLabel(n.category)}</span>` : ""}
-      </div>
-      <h3>${pick(n, "title")}</h3>
-      <p class="line-clamp-3">${md(pick(n, "content"))}</p>
-    </article>`).join("");
 }
 
 async function renderPublications() {
@@ -348,6 +395,7 @@ async function renderNews() {
       </div>
       <h2>${pick(n, "title")}</h2>
       ${pick(n, "content") ? `<div class="content">${md(pick(n, "content"))}</div>` : ""}
+      ${n.image ? `<img class="news-photo" src="${assetHref(n.image)}" alt="">` : ""}
       ${n.link_url ? `<a class="read-more" href="${n.link_url}" target="_blank" rel="noopener noreferrer">${t("news.readMore")} ${ICONS.external}</a>` : ""}
     </article>`).join("");
 }
@@ -391,11 +439,64 @@ async function renderGallery() {
   }).join("")}</div>`;
 }
 
+function figureInkTop(img) {
+  const w = img.naturalWidth;
+  const h = img.naturalHeight;
+  const canvas = document.createElement("canvas");
+  canvas.width = w;
+  canvas.height = h;
+  const ctx = canvas.getContext("2d", { willReadFrequently: true });
+  ctx.drawImage(img, 0, 0);
+  const data = ctx.getImageData(0, 0, w, h).data;
+  const x0 = Math.floor(w * 0.4);
+  for (let y = 0; y < h; y++) {
+    let n = 0;
+    for (let x = x0; x < w; x++) {
+      const i = (y * w + x) * 4;
+      if (data[i] < 248 || data[i + 1] < 248 || data[i + 2] < 248) n += 1;
+    }
+    if (n > 2) return y;
+  }
+  return 0;
+}
+
+function alignHeroFigure() {
+  const hero = document.querySelector(".hero");
+  const img = document.querySelector(".hero-bg img");
+  const portrait = document.querySelector(".hero-portrait");
+  if (!hero || !img || !portrait || !img.naturalWidth) return;
+  const boxW = img.clientWidth;
+  const boxH = img.clientHeight;
+  const scale = Math.min(boxW / img.naturalWidth, boxH / img.naturalHeight);
+  const rendH = img.naturalHeight * scale;
+  const offY = (boxH - rendH) / 2;
+  if (alignHeroFigure.ringTop == null) alignHeroFigure.ringTop = figureInkTop(img);
+  const ringTopInHero = offY + alignHeroFigure.ringTop * scale;
+  const portraitTopInHero = portrait.getBoundingClientRect().top - hero.getBoundingClientRect().top;
+  img.style.transform = `translateY(${Math.round(portraitTopInHero - ringTopInHero)}px)`;
+}
+
+function initHeroAlign() {
+  const img = document.querySelector(".hero-bg img");
+  if (!img) return;
+  const run = () => alignHeroFigure();
+  const start = () => {
+    run();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(run);
+  };
+  if (img.complete && img.naturalWidth) start();
+  else img.addEventListener("load", start, { once: true });
+  window.addEventListener("resize", run);
+}
+
 function boot() {
   injectChrome();
   applyStaticI18n();
   const page = document.body.dataset.page;
-  if (page === "home") renderHome();
+  if (page === "home") {
+    initHeroAlign();
+    renderHome();
+  }
   if (page === "publications") renderPublications();
   if (page === "cv") renderCV();
   if (page === "news") renderNews();

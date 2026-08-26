@@ -40,7 +40,9 @@ git push
 | 新闻 | `data/news.json` |
 | 相册 | `data/gallery.json` + `assets/` 里的图片 |
 | 简历条目 | `data/cv.json` |
-| 主页姓名、简介、研究方向、招生 | `index.html` |
+| 主页姓名、简介、招生 | `index.html` |
+| 主页时间线（最新 5 条新闻） | `index.html` + `js/site.js` 的 `renderHome()` |
+| 主页精选论文 | `data/publications.json` 里的 `selected` / `selected_order` |
 | 中英文界面文案 | `js/i18n.js` |
 | 主页背景图 | `assets/hero.jpeg` |
 | 主页简介旁的照片 | `assets/portrait.jpg` |
@@ -75,7 +77,9 @@ git push
   "abstract": "One or two sentences.",
   "citation_count": 0,
   "featured": false,
-  "pdf_url": null
+  "selected": false,
+  "pdf_url": null,
+  "thumbnail": null
 }
 ```
 
@@ -90,7 +94,27 @@ git push
 | `atmospheric_flows` | Atmospheric Flows |
 | `other` | Other |
 
-`doi` 只填编号，不要加 `https://doi.org/`。主页会自动显示最新 4 篇。
+`doi` 只填编号，不要加 `https://doi.org/`。
+
+主页「精选论文 / Selected Publications」由 JSON 标记决定，不必改代码：
+
+- `"selected": true` — 出现在精选列表
+- `"selected_order": 1` — 数字越小越靠前（现在 1–7 对应 PRL 2026 → JFM 2025 → JFM 2024 → JFM 2023 → JFM 2022 → Nature Communications 2021 → PRF 2019）
+
+改精选列表：把不要的论文改成 `"selected": false`（或删掉这两项），给要展示的论文写上 `selected` 和顺序号。
+
+### 论文页缩略图（可选）
+
+论文条目可加一页 PDF/论文截图，供以后使用。仓库里目前没有现成的论文内页图。
+
+1. 把图片放到例如 `assets/papers/prl-2026.jpg`。
+2. 在对应论文条目里加上：
+
+```json
+"thumbnail": "assets/papers/prl-2026.jpg"
+```
+
+路径相对网站根目录（和 `assets/hero.jpeg` 同一层写法）。也可以写 `../assets/papers/prl-2026.jpg`。
 
 ### 删除一篇
 
@@ -113,6 +137,7 @@ git push
   "content": "You can use *italic*, **bold**, and [links](https://example.com).",
   "content_zh": "中文正文。论文题目、期刊名、报道标题保持英文原文。",
   "link_url": "https://doi.org/10.xxxx/xxxxx",
+  "image": null,
   "pinned": false
 }
 ```
@@ -122,7 +147,20 @@ git push
 - `title_zh` / `content_zh` 供中文界面使用；论文题目、期刊名、会议名、报道标题等专有名词保持英文。
 - `pinned: true` 会在 News 页显示 Pinned 标签。
 - 没有外链时：`"link_url": null`。
-- 主页自动显示日期最新的 3 条。
+- 主页时间线只显示日期最新的 **5** 条新闻；**越早越靠上，越新越靠下**。论文在时间线下方的「精选论文」模块单独列出。
+
+### 新闻配图（可选）
+
+时间线新闻可显示一张相关照片。没有图时不要占假图，把 `"image"` 设为 `null` 即可。
+
+1. 把照片放到例如 `assets/news/egu-2026.jpg`（或沿用 `assets/gallery/` 里已有的相关图）。
+2. 在该条新闻里写：
+
+```json
+"image": "assets/news/egu-2026.jpg"
+```
+
+EGU 2026 墙报目前用 `assets/news/egu-2026-poster.jpg`（由 `poster_21April.pdf` 导出）。PRL 2026 发表那条用 `assets/news/prl-2026-annuli.jpg`。要换图时覆盖同名文件，或改 JSON 里的 `"image"` 路径。
 
 ### 删除一条
 
@@ -179,7 +217,7 @@ git push
 <img src="assets/hero.jpeg" alt="Abstract research visualization">
 ```
 
-图片会自动铺满顶部并裁切；底部有一层深色渐变，方便看清白色名字。
+图片会铺满顶部，科学图靠右；左侧偏白，姓名和简介使用深色字。
 
 主页简介旁的圆形照片是 `assets/portrait.jpg`。用同名文件覆盖即可更换。若改文件名，同步改 `index.html` 里 `hero-portrait` 的 `src`。
 
@@ -194,6 +232,8 @@ git push
 | 大标题姓名 | `Shan-Shan Ding`（中文为 `丁姗姗`，在 `js/i18n.js` 的 `hero.name`） |
 | 职位 / 单位 | `hero.role`、`hero.affil` |
 | 关于我 | `hero.about` |
+| 主页时间线 | 最新 5 条新闻，见第 4 节 |
+| 精选论文 | `data/publications.json` 的 `selected` / `selected_order` |
 | 招生信息 | `#openings` 这一段 |
 | 浏览器标签标题 | `<title>ScholarsArchive</title>` |
 
