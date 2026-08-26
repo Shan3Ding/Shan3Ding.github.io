@@ -9,11 +9,11 @@ export const I18N = {
     "nav.news": "News",
     "nav.index": "Index",
     "nav.close": "Close",
-    "hero.kicker": "Fluid Dynamics · Geophysical Turbulence · Atmospheric Flows",
-    "hero.bio": "Assistant Professor, leading independent research on thermal effects over rough-wall turbulent boundary layers and large-scale flow structures in geophysical and astrophysical flows.",
+    "hero.name": "Shan-Shan Ding",
+    "hero.role": "Assistant Professor",
     "hero.affil": "Fudan University",
-    "hero.focusLabel": "Current Focus",
-    "hero.focus": "Thermal effect in geophysical turbulence",
+    "hero.aboutLabel": "About Me",
+    "hero.about": "I am an Assistant Professor at Fudan University. Before joining Fudan, I carried out postdoctoral research at several institutes in the UK, starting with a visiting researcher position at Imperial College London, followed by postdoctoral appointments at the EnFlo Lab (University of Surrey) and the University of Oxford. My independent research focus on rough-wall turbulent boundary layers over non-uniform wall conditions and the energetics of large-scale flow structures in rotating thermal turbulence, with applications to atmospheric boundary layers, geophysical and astrophysical flows, respectively. I provide peer-review services for a range of international journals in fluid dynamics.",
     "home.recentPubs": "Recent Publications",
     "home.latestNews": "Latest News",
     "home.viewAllPubs": "View all publications",
@@ -26,7 +26,6 @@ export const I18N = {
     "footer.body": "I'm always open to discussing new research opportunities, collaborations, or simply exchanging ideas about fluid dynamics, geostrophic turbulence, and atmospheric flows.",
     "footer.sitemap": "Site Map",
     "footer.rights": "© 2026 — All rights reserved",
-    "footer.monograph": "The Living Monograph",
     "page.publications": "Publications",
     "page.cv": "Curriculum Vitae",
     "page.news": "News",
@@ -74,11 +73,11 @@ export const I18N = {
     "nav.news": "新闻",
     "nav.index": "目录",
     "nav.close": "关闭",
-    "hero.kicker": "流体力学 · 地球物理湍流 · 大气流动",
-    "hero.bio": "助理教授。独立开展粗糙壁湍流边界层热效应，以及地球物理与天体物理流动中大尺度结构的研究。",
+    "hero.name": "丁姗姗",
+    "hero.role": "助理教授",
     "hero.affil": "复旦大学",
-    "hero.focusLabel": "当前方向",
-    "hero.focus": "地球物理湍流中的热效应",
+    "hero.aboutLabel": "关于我",
+    "hero.about": "我是复旦大学助理教授。加入复旦之前，我在英国多家机构从事博士后研究：先在 Imperial College London 任访问学者，随后在萨里大学 EnFlo Lab 以及牛津大学担任博士后。我的独立研究方向分别是非均匀壁面条件下的粗糙壁湍流边界层，以及旋转热湍流中大尺度流动结构的能量学，并应用于大气边界层以及地球物理与天体物理流动。我为多本流体力学国际期刊担任审稿人。",
     "home.recentPubs": "近期论文",
     "home.latestNews": "最新动态",
     "home.viewAllPubs": "全部论文",
@@ -91,7 +90,6 @@ export const I18N = {
     "footer.body": "欢迎就新的研究机会、合作，或流体力学、地球物理湍流与大气流动相关问题来信讨论。",
     "footer.sitemap": "网站地图",
     "footer.rights": "© 2026 — 保留所有权利",
-    "footer.monograph": "The Living Monograph",
     "page.publications": "论文",
     "page.cv": "简历",
     "page.news": "新闻",
@@ -129,7 +127,7 @@ export const I18N = {
     "cat.talk": "报告",
     "cat.award": "荣誉",
     "cat.opening": "招生",
-    "meta.home": "丁杉杉 — 复旦大学助理教授。流体力学、地球物理湍流与大气流动。",
+    "meta.home": "丁姗姗 — 复旦大学助理教授。流体力学、地球物理湍流与大气流动。",
   },
 };
 
@@ -162,6 +160,9 @@ export function applyStaticI18n() {
   document.documentElement.lang = getLang() === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     el.textContent = t(el.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+    el.setAttribute("alt", t(el.dataset.i18nAlt));
   });
   const page = document.body.dataset.page;
   if (page === "home") {

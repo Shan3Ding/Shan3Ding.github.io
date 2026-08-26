@@ -429,7 +429,7 @@ body.nav-open .overlay-panel { transform: translateX(0); }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 0.35rem;
 }
 
 @media (min-width: 768px) {
@@ -445,65 +445,53 @@ body.nav-open .overlay-panel { transform: translateX(0); }
   border: 1px solid hsl(var(--primary) / 0.75);
   box-shadow: 0 0 0 6px hsl(0 0% 0% / 0.28);
   flex-shrink: 0;
-}
-
-.kicker {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: hsl(var(--primary));
-  margin-bottom: 1.5rem;
-  display: block;
+  margin-bottom: 0.85rem;
 }
 
 .hero h1 { color: hsl(var(--background)); }
 
-.hero-bio p {
+.hero-role,
+.hero-affil,
+.hero-email {
+  font-family: var(--font-sans);
   font-size: 0.875rem;
-  color: hsl(var(--background) / 0.6);
-  line-height: 1.625;
-  max-width: 20rem;
-  margin: 0 0 0 auto;
+  line-height: 1.5;
+  color: hsl(var(--primary));
 }
 
 .hero-affil {
-  margin-top: 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: hsl(var(--primary));
+  margin-top: 0;
 }
 
 .hero-email {
   display: block;
-  margin-top: 0.45rem;
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  color: hsl(var(--primary));
+  margin-top: 0;
 }
 
 .hero-email:hover { opacity: 0.8; }
 
-.hero-focus {
+.hero-about {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid hsl(var(--background) / 0.1);
+  max-width: 48rem;
 }
 
-.hero-focus span {
+.hero-about span {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: hsl(var(--background) / 0.4);
+  color: hsl(var(--primary));
 }
 
-.hero-focus p {
-  font-family: var(--font-serif);
-  font-size: 1.125rem;
-  font-style: italic;
-  color: hsl(var(--background) / 0.8);
-  margin: 0.25rem 0 0;
+.hero-about p {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-style: normal;
+  line-height: 1.7;
+  color: hsl(var(--background) / 0.82);
+  margin: 0.75rem 0 0;
 }
 
 /* Sections */
@@ -753,7 +741,6 @@ html[lang="zh-CN"] {
 
 html[lang="zh-CN"] .text-hero,
 html[lang="zh-CN"] .text-section,
-html[lang="zh-CN"] .hero-focus p,
 html[lang="zh-CN"] .news-card h3,
 html[lang="zh-CN"] .news-item h2,
 html[lang="zh-CN"] .cv-body h3,
@@ -767,7 +754,8 @@ html[lang="zh-CN"] .index-btn span,
 html[lang="zh-CN"] .news-meta .cat,
 html[lang="zh-CN"] .cv-meta .cat,
 html[lang="zh-CN"] .chip,
-html[lang="zh-CN"] .gallery-cap span {
+html[lang="zh-CN"] .gallery-cap span,
+html[lang="zh-CN"] .hero-about span {
   text-transform: none;
   letter-spacing: 0.06em;
 }

@@ -103,7 +103,7 @@ function injectChrome() {
   header.innerHTML = `
     <header class="site-header">
       <div class="site-header-inner">
-        <a class="brand" href="${pathFor("/")}">S.-S. Ding</a>
+        <a class="brand" href="${pathFor("/")}">${t("hero.name")}</a>
         <div class="header-actions">
           ${langSwitch()}
           <button class="index-btn" type="button" aria-label="${t("nav.index")}" id="open-index">
@@ -158,7 +158,6 @@ function injectChrome() {
         <div class="footer-rule"></div>
         <div class="footer-bottom">
           <span>${t("footer.rights")}</span>
-          <span>${t("footer.monograph")}</span>
         </div>
       </div>
     </footer>

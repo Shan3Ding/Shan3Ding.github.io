@@ -191,11 +191,9 @@ git push
 
 | 页面上看到的 | 在文件里搜 |
 |---|---|
-| 大标题姓名 | `Shan-Shan Ding`（`<h1>` 那一行） |
-| 研究方向关键词 | `Fluid Dynamics · Geophysical Turbulence · Atmospheric Flows` |
-| 简介 | `Assistant Professor, leading independent research...`（中文在 `js/i18n.js` 的 `hero.bio`） |
-| 单位 | `Fudan University` |
-| 当前课题 | `Thermal effect in geophysical turbulence` |
+| 大标题姓名 | `Shan-Shan Ding`（中文为 `丁姗姗`，在 `js/i18n.js` 的 `hero.name`） |
+| 职位 / 单位 | `hero.role`、`hero.affil` |
+| 关于我 | `hero.about` |
 | 招生信息 | `#openings` 这一段 |
 | 浏览器标签标题 | `<title>ScholarsArchive</title>` |
 
