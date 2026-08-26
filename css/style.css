@@ -392,6 +392,28 @@ body.nav-open .overlay-panel { transform: translateX(0); }
   .hero-bio { grid-column: span 4; text-align: right; }
 }
 
+.hero-bio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero-bio { align-items: flex-end; }
+}
+
+.hero-portrait {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+  border: 1px solid hsl(var(--primary) / 0.75);
+  box-shadow: 0 0 0 6px hsl(0 0% 0% / 0.28);
+  flex-shrink: 0;
+}
+
 .kicker {
   font-family: var(--font-mono);
   font-size: 0.75rem;
