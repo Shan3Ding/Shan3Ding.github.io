@@ -59,7 +59,7 @@ const CV_LABELS = {
   service: "cv.service",
 };
 
-const ROOT = new URL("../", import.meta.url);
+const ROOT = new URL("../", import.meta.url.replace(/[?#].*$/, ""));
 const jsonCache = {};
 
 function pathFor(href) {
@@ -248,13 +248,19 @@ function selectedPubs(pubs) {
 }
 
 function timelineNewsCard(n) {
-  const img = n.image
-    ? `<img class="tl-img" src="${assetHref(n.image)}" alt="">`
-    : "";
+  const titleText = pick(n, "title");
+  const alt = String(titleText || "")
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;");
+  const media = n.image
+    ? `<div class="tl-media"><img class="tl-img" src="${assetHref(n.image)}" alt="${alt}"></div>`
+    : `<div class="tl-media" aria-hidden="true"></div>`;
   const title = n.link_url
-    ? `<a href="${n.link_url}" target="_blank" rel="noopener noreferrer">${pick(n, "title")}</a>`
-    : pick(n, "title");
+    ? `<a href="${n.link_url}" target="_blank" rel="noopener noreferrer">${titleText}</a>`
+    : titleText;
   return `
+    ${media}
     <div class="tl-panel">
       <div class="tl-date-row">
         <time class="tl-date" datetime="${n.date || ""}">${formatDate(n.date)}</time>
@@ -263,7 +269,6 @@ function timelineNewsCard(n) {
         ${n.category ? `<span class="tl-cat">${catLabel(n.category)}</span>` : ""}
         <h3>${title}</h3>
         <p class="tl-excerpt">${md(pick(n, "content"))}</p>
-        ${img}
       </div>
     </div>`;
 }
